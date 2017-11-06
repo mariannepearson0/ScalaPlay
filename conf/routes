@@ -5,5 +5,13 @@
 # Home page
 GET     /                           controllers.Application.index
 
+GET     /create                     controllers.MyController.create
+
+GET     /find/:name                 controllers.MyController.findByName(name)
+
+GET     /deleteAll/:name            controllers.MyController.removeAll(name)
+
+GET     /deleteOne/:name            controllers.MyController.removeOne(name)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
